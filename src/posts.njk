@@ -1,0 +1,16 @@
+---
+pagination:
+    data: posts
+    size: 1
+    alias: post
+permalink: "posts/{{ post.title | slug }}/"
+layout: layout.njk
+---
+
+<h1>{{post.title}}</h1>
+
+{{post.body}}
+
+{# Pour chaques articles récupérés dans post.js grâce à l'API axios, 
+posts.njk créer une page avec size 1 dans le layout  #}
+{# Penser à installer l'API axios avec la commande npm install axios #}
